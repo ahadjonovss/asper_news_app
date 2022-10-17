@@ -1,0 +1,19 @@
+SafeArea(
+        child: Container(
+          padding: EdgeInsets.all(24).r,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Top Stories For You",style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w700),),
+            SizedBox(height: 12.h,),
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: 10,
+                  itemBuilder: (context, index) => newsbar(context),),
+            )
+
+          ],
+        ),
+        ),
+      ),
